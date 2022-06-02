@@ -10,6 +10,8 @@ Plug 'w0rp/ale'
 Plug 'cohama/lexima.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'vim-airline/vim-airline'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 
@@ -22,6 +24,7 @@ set number
 set relativenumber
 set mouse=a
 set inccommand=split
+set smarttab
 " ---------- Set ----------
 
 " ---------- Remap ----------
@@ -82,3 +85,15 @@ au User Ncm2Plugin call ncm2#register_source({
     \ 'on_complete': ['ncm2#on_complete#omni', 'csscomplete#CompleteCSS'],
     \ })
 " ---------- NCM2 ----------
+
+" ---------- NERDTree ----------
+autocmd VimEnter * NERDTree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+let g:NERDTreeDirArrowExpandable="+"
+let g:NERDTreeDirArrowCollapsible="~"
+" ---------- NERDTree ----------
+
