@@ -1,6 +1,0 @@
-sudo apt-get install exuberant-ctags
-Fzf
-
-
-
-In nvim run :CocInstall coc-json coc-tsserver 
