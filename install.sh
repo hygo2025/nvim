@@ -14,6 +14,14 @@ rm $HOME/.local/share/fonts/Hack.zip
 
 fc-cache -rv
 
-curl -LO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb --output ~/Downloads/
-sudo dpkg -i ~/Downloads/ripgrep_13.0.0_amd64.deb
+curl -fLo ~/Downloads/ripgrep_13.0.0_amd64.deb --create-dirs \
+    https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
+
+sudo apt install ~/Downloads/ripgrep_13.0.0_amd64.deb
 sudo apt install fd-find
+
+
+curl -fLo ~/Downloads/nvim-linux64.deb --create-dirs \
+    https://github.com/neovim/neovim/releases/download/v0.7.0/nvim-linux64.deb
+
+sudo apt install ~/Downloads/nvim-linux64.deb
