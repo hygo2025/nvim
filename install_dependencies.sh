@@ -7,7 +7,7 @@ git clone https://aur.archlinux.org/yay.git;
 cd yay;
 makepkg -si;
 
-yay -Sy neovim visual-studio-code-bin dbeaver discord tilix google-cloud-sdk spotify;
+yay -Sy neovim visual-studio-code-bin dbeaver discord tilix google-cloud-sdk spotify postman;
 
 pip install pynvim;
 
