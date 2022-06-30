@@ -1,15 +1,17 @@
 #! /bin/bash
 
-sudo pacman -Sy curl wget unzip go ripgrep fd tilix python-pip opera;
+sudo pacman -Sy curl wget unzip go ripgrep fd tilix python-pip opera copyq libxcrypt-compat;
 
 cd ~/;
 git clone https://aur.archlinux.org/yay.git;
 cd yay;
 makepkg -si;
 
-yay -Sy neovim visual-studio-code-bin dbeaver discord tilix;
+yay -Sy neovim visual-studio-code-bin dbeaver discord tilix google-cloud-sdk spotify;
 
 pip install pynvim;
+
+gcloud auth application-default login;
 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash;
